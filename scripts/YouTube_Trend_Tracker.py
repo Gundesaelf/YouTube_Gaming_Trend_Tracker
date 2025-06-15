@@ -49,7 +49,7 @@ for video in videos:
     title = video["snippet"]["title"]
     channel = video["snippet"]["channelTitle"]
     
-    views = int(video['statistics']['viewCount'])
+    views = int(video.get('statistics', {}).get('viewCount', 0))
     
     date_published = datetime.strptime(video["snippet"]["publishedAt"], "%Y-%m-%dT%H:%M:%SZ").strftime("%d%b%Y")
     video_url = f"https://www.youtube.com/watch?v={video_id}"
@@ -63,4 +63,4 @@ db.commit()
 curs.close()
 db.close()
 
-print('Database updated')
+print('\n\nDatabase updated\n\n')
