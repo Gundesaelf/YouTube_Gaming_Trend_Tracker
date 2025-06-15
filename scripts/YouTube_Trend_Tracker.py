@@ -1,8 +1,11 @@
 import requests
 import sqlite3
 from datetime import datetime
+import os
+from dotenv import load_dotenv
 
-API_KEY = 'your_api_key_here'
+load_dotenv()
+API_KEY = os.getenv("YOUTUBE_API_KEY")
 base_url = "https://www.googleapis.com/youtube/v3/videos"
 params = {
     "part": "snippet,statistics",
