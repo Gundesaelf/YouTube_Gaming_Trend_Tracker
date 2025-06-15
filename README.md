@@ -26,3 +26,6 @@ Go to the [Google Cloud Console](https://console.cloud.google.com/) and enable t
 ### 2. Add your API key
 
 You can hardcode the key (not recommended), or use an environment variable for safety.
+
+
+## 🔗 Connect with me https://www.linkedin.com/in/chris-gundes
